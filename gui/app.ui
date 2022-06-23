@@ -23,6 +23,12 @@
       <height>211</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
@@ -30,43 +36,136 @@
      <attribute name="title">
       <string>M/M/s</string>
      </attribute>
-     <widget class="QLineEdit" name="lineEdit_arrival_rate">
+     <widget class="QLineEdit" name="input_arrival_rate_mms">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>30</y>
+        <x>200</x>
+        <y>29</y>
         <width>113</width>
         <height>21</height>
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_num_servers">
+     <widget class="QLineEdit" name="input_num_servers_mms">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>91</y>
+        <x>200</x>
+        <y>90</y>
         <width>113</width>
         <height>21</height>
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_simulate">
+     <widget class="QPushButton" name="btn_simulate_mms">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>30</y>
-        <width>80</width>
-        <height>26</height>
+        <x>370</x>
+        <y>20</y>
+        <width>101</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
        <string>Simular</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_service_rate">
+     <widget class="QLabel" name="label_service_rate_mms">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>20</x>
+        <y>59</y>
+        <width>141</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de servicio:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clear_mms">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>80</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_service_rate_mms">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>60</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_num_servers_mms">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>89</y>
+        <width>141</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Número de servidores:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_arrival_rate_mms">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>29</y>
+        <width>141</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de arribos:</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progress_bar_mms">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>140</y>
+        <width>118</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_mm1">
+     <attribute name="title">
+      <string>M/M/1</string>
+     </attribute>
+     <widget class="QPushButton" name="btn_simulate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>21</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simular</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_service_rate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
         <y>60</y>
         <width>141</width>
         <height>18</height>
@@ -76,46 +175,43 @@
        <string>Tasa de servicio:</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_clear">
+     <widget class="QLineEdit" name="input_service_rate_mm1">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>70</y>
-        <width>80</width>
-        <height>26</height>
+        <x>200</x>
+        <y>61</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clear_mm1">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>81</y>
+        <width>101</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="text">
        <string>Limpiar</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_service_rate">
+     <widget class="QLineEdit" name="input_arrival_rate_mm1">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>60</y>
-        <width>111</width>
+        <x>200</x>
+        <y>30</y>
+        <width>113</width>
         <height>21</height>
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_num_servers">
+     <widget class="QLabel" name="label_arrival_rate_mm1">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>90</y>
-        <width>141</width>
-        <height>18</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Número de servidores:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_arrival_rate">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
+        <x>20</x>
         <y>30</y>
         <width>141</width>
         <height>18</height>
@@ -125,27 +221,150 @@
        <string>Tasa de arribos:</string>
       </property>
      </widget>
-     <widget class="QProgressBar" name="progressBar_mms">
+     <widget class="QProgressBar" name="progress_bar_mm1">
       <property name="geometry">
        <rect>
         <x>740</x>
-        <y>150</y>
+        <y>140</y>
         <width>118</width>
         <height>23</height>
        </rect>
       </property>
       <property name="value">
-       <number>24</number>
+       <number>0</number>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_mm1">
+    <widget class="QWidget" name="tab_mg1">
      <attribute name="title">
-      <string>M/M/1</string>
+      <string>M/G/1</string>
+     </attribute>
+     <widget class="QPushButton" name="btn_simulate_mg1">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>20</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simular</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_average_service_time_mg1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>181</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tiempo promedio de servicio</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_standard_dev_mg1">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>90</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_standard_dev_mg1_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>241</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Desvío estándar del tiempo de servicio</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_average_service_time_mg1">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>60</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clear_mg1">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>80</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_arrival_rate_mg1">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>29</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_standard_dev_mg1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>141</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de arribos:</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progress_bar_mg1">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>140</y>
+        <width>118</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_q_finite_length">
+     <attribute name="title">
+      <string>Cola finita</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_population_finite">
+     <attribute name="title">
+      <string>Población finita</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_config">
+     <attribute name="title">
+      <string>Ajustes</string>
      </attribute>
     </widget>
    </widget>
-   <widget class="QFrame" name="frame_results_mms">
+   <widget class="QFrame" name="frame_results">
     <property name="enabled">
      <bool>false</bool>
     </property>
@@ -163,33 +382,42 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QListWidget" name="list_results_mms">
+    <widget class="QListWidget" name="list_results">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>641</width>
+       <width>651</width>
        <height>301</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">font-size: 20px;</string>
      </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="autoScroll">
+      <bool>true</bool>
+     </property>
      <property name="itemAlignment">
       <set>Qt::AlignLeading</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="label_results">
      <property name="geometry">
       <rect>
        <x>670</x>
        <y>20</y>
        <width>191</width>
-       <height>31</height>
+       <height>281</height>
       </rect>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>Esperando simulación...</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
    </widget>
@@ -203,13 +431,6 @@
      <height>30</height>
     </rect>
    </property>
-   <widget class="QMenu" name="btnMenu_archivo">
-    <property name="title">
-     <string>Archivo</string>
-    </property>
-    <addaction name="actionSalir"/>
-   </widget>
-   <addaction name="btnMenu_archivo"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionSalir">
@@ -219,23 +440,34 @@
   </action>
  </widget>
  <tabstops>
-  <tabstop>lineEdit_arrival_rate</tabstop>
-  <tabstop>lineEdit_service_rate</tabstop>
-  <tabstop>lineEdit_num_servers</tabstop>
-  <tabstop>btn_simulate</tabstop>
-  <tabstop>btn_clear</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>input_arrival_rate_mms</tabstop>
+  <tabstop>input_service_rate_mms</tabstop>
+  <tabstop>input_num_servers_mms</tabstop>
+  <tabstop>btn_simulate_mms</tabstop>
+  <tabstop>btn_clear_mms</tabstop>
+  <tabstop>input_arrival_rate_mm1</tabstop>
+  <tabstop>input_service_rate_mm1</tabstop>
+  <tabstop>btn_simulate_mm1</tabstop>
+  <tabstop>btn_clear_mm1</tabstop>
+  <tabstop>input_arrival_rate_mg1</tabstop>
+  <tabstop>input_average_service_time_mg1</tabstop>
+  <tabstop>input_standard_dev_mg1</tabstop>
+  <tabstop>btn_simulate_mg1</tabstop>
+  <tabstop>btn_clear_mg1</tabstop>
+  <tabstop>list_results</tabstop>
  </tabstops>
  <resources/>
  <connections>
   <connection>
-   <sender>btn_clear</sender>
+   <sender>btn_clear_mms</sender>
    <signal>clicked()</signal>
-   <receiver>lineEdit_service_rate</receiver>
+   <receiver>input_service_rate_mms</receiver>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>479</x>
-     <y>161</y>
+     <x>399</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>313</x>
@@ -244,34 +476,98 @@
    </hints>
   </connection>
   <connection>
-   <sender>btn_clear</sender>
+   <sender>btn_clear_mms</sender>
    <signal>clicked()</signal>
-   <receiver>lineEdit_arrival_rate</receiver>
+   <receiver>input_arrival_rate_mms</receiver>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>477</x>
-     <y>161</y>
+     <x>397</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
-     <x>346</x>
-     <y>97</y>
+     <x>286</x>
+     <y>95</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>btn_clear</sender>
+   <sender>btn_clear_mms</sender>
    <signal>clicked()</signal>
-   <receiver>lineEdit_num_servers</receiver>
+   <receiver>input_num_servers_mms</receiver>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>526</x>
-     <y>161</y>
+     <x>446</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
-     <x>343</x>
-     <y>177</y>
+     <x>283</x>
+     <y>176</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_mm1</sender>
+   <signal>clicked()</signal>
+   <receiver>input_arrival_rate_mm1</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>404</x>
+     <y>160</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>310</x>
+     <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_mm1</sender>
+   <signal>clicked()</signal>
+   <receiver>input_service_rate_mm1</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>385</x>
+     <y>166</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_mm1</sender>
+   <signal>clicked()</signal>
+   <receiver>progress_bar_mm1</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>460</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>801</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clear_mms</sender>
+   <signal>clicked()</signal>
+   <receiver>progress_bar_mms</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>452</x>
+     <y>160</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>802</x>
+     <y>219</y>
     </hint>
    </hints>
   </connection>

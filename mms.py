@@ -5,6 +5,7 @@ import math
 class MMS():
 
     def __init__(self, service_rate, arrival_rate, num_servers):
+        # Párametros recibidos
         self.title = ' Sistema de colas M/M/S '
         self.service_name = "Tasa de servicio"
         self.service = service_rate
@@ -13,17 +14,17 @@ class MMS():
         self.num_servers_name = "Número de servidores "
         self.num_servers = num_servers
 
-        # Calculates values
+        # Cálculo de valores internos
         self.lambda_mu = self.arrivals / self.service
         self._s = self.lambda_mu / self.num_servers
         self.s1 = self.num_servers-1
         self.fact_s1 = math.factorial(self.s1)
         self._t = (self.lambda_mu**self.num_servers)/(self.fact_s1*self.num_servers*(1-self._s))
-        self.p = self.calculateP()
-        self.p0 = self.calculateP0()
-        self.recalculateP()
+        self.p = self.__calculate_p()
+        self.p0 = self.__calculate_p0()
+        self.__recalculate_p()
 
-        # Vars
+        # Variables
         self.utilization_name = "Utilización"
         self.utilization = self.arrivals / (self.service*self.num_servers)
         self.p_empty_name = "Probabilidad de sistema vacío (P(0))"
@@ -37,23 +38,26 @@ class MMS():
         self.time_in_system_name = "Tiempo en el sistema (Wq)"
         self.time_in_system = self.time_in_queue+1/self.service
         self.p_waits_name = "Probabilidad que un cliente tenga que esperar"
-        self.p_waits = self.calculate_pw()
+        self.p_waits = self.__calculate_pw()
 
-    def calculate_pw(self):
+    def __calculate_pw(self):
+        """ Cálcula el valor de la probabilidad de espera """
         sum = 0
         for x in range(self.num_servers):
             sum += self.p[x]['d']
 
         return 1-sum
 
-    def calculateP0(self):
+    def __calculate_p0(self):
+        """ Cálcula el valor de P(O) """
         sum = 0
         for x in range(self.num_servers):
             sum += self.p[x]['b']
 
         return 1/(sum+self._t)
 
-    def recalculateP(self):
+    def __recalculate_p(self):
+        """ Cálcula nuevamente el valor de P conociendo los valores de c y d"""
         for x in range(self.num_servers):
             if x == 0:
                 self.p[x]['c'] = self.p0
@@ -62,7 +66,8 @@ class MMS():
 
             self.p[x]['d'] = self.p[x]['c'] if x < self.num_servers else 0
 
-    def calculateP(self):
+    def __calculate_p(self):
+        """ Calcula el valor de P"""
         p = []
         for x in range(self.num_servers):
             if x == 0:
@@ -77,12 +82,13 @@ class MMS():
                         p.append(dict(a=x, b=p[x-1]['b']*self.lambda_mu/x, c=0, d=0))
         return p
 
-    def graf(self): 
-        result = [
+    def simulate(self):
+        """ Simula la cola con los parámetros recibidos """
+        return [
             str(self.arrivals_name) + ': ' + str(round(self.arrivals, 3)),
             str(self.service_name) + ': ' + str(round(self.service, 3)),
             str(self.num_servers_name) + ': ' + str(round(self.num_servers, 3)),
-            str(self.utilization_name) + ': ' + str(round(self.utilization, 3)),
+            str(self.utilization_name) + ': ' + str(round(self.utilization*100, 3)) + ' %',
             str(self.p_empty_name) + ': ' + str(round(self.p_empty, 3)),
             str(self.queue_length_name) + ': ' + str(round(self.queue_length, 3)),
             str(self.number_in_system_name) + ': ' + str(round(self.number_in_system, 3)),
@@ -90,6 +96,4 @@ class MMS():
             str(self.time_in_system_name) + ': ' + str(round(self.time_in_system, 3)),
             str(self.p_waits_name) + ': ' + str(round(self.p_waits, 3)),
         ]
-
-        print(str(result))
-        return result
+ 
