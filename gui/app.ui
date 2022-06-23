@@ -6,108 +6,192 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>480</height>
+    <width>869</width>
+    <height>596</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Simulador de colas</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_arrival_rate">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>30</y>
-      <width>141</width>
-      <height>18</height>
+      <x>0</x>
+      <y>0</y>
+      <width>871</width>
+      <height>211</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Tasa de arribos:</string>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
+    <widget class="QWidget" name="tab_mms">
+     <attribute name="title">
+      <string>M/M/s</string>
+     </attribute>
+     <widget class="QLineEdit" name="lineEdit_arrival_rate">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_num_servers">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>91</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_simulate">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>30</y>
+        <width>80</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simular</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_service_rate">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>60</y>
+        <width>141</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de servicio:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clear">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>70</y>
+        <width>80</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_service_rate">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>60</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_num_servers">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>90</y>
+        <width>141</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Número de servidores:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_arrival_rate">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>30</y>
+        <width>141</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de arribos:</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar_mms">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>150</y>
+        <width>118</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_mm1">
+     <attribute name="title">
+      <string>M/M/1</string>
+     </attribute>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="btn_clear">
+   <widget class="QFrame" name="frame_results_mms">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>70</y>
-      <width>80</width>
-      <height>26</height>
+      <x>-1</x>
+      <y>209</y>
+      <width>871</width>
+      <height>321</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Limpiar</string>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_service_rate">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>60</y>
-      <width>111</width>
-      <height>21</height>
-     </rect>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_num_servers">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>91</y>
-      <width>113</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_simulate">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>30</y>
-      <width>80</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Simular</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_num_servers">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>90</y>
-      <width>141</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Número de servidores:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_service_rate">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>60</y>
-      <width>141</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Tasa de servicio:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_arrival_rate">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>30</y>
-      <width>113</width>
-      <height>21</height>
-     </rect>
-    </property>
+    <widget class="QListWidget" name="list_results_mms">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>641</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 20px;</string>
+     </property>
+     <property name="itemAlignment">
+      <set>Qt::AlignLeading</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>20</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -115,8 +199,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>640</width>
-     <height>23</height>
+     <width>869</width>
+     <height>30</height>
     </rect>
    </property>
    <widget class="QMenu" name="btnMenu_archivo">
@@ -150,12 +234,12 @@
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>475</x>
-     <y>103</y>
+     <x>479</x>
+     <y>161</y>
     </hint>
     <hint type="destinationlabel">
-     <x>309</x>
-     <y>67</y>
+     <x>313</x>
+     <y>133</y>
     </hint>
    </hints>
   </connection>
@@ -166,8 +250,8 @@
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>473</x>
-     <y>108</y>
+     <x>477</x>
+     <y>161</y>
     </hint>
     <hint type="destinationlabel">
      <x>346</x>
@@ -182,12 +266,12 @@
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>522</x>
-     <y>112</y>
+     <x>526</x>
+     <y>161</y>
     </hint>
     <hint type="destinationlabel">
-     <x>339</x>
-     <y>128</y>
+     <x>343</x>
+     <y>177</y>
     </hint>
    </hints>
   </connection>

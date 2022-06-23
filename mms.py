@@ -77,17 +77,19 @@ class MMS():
                         p.append(dict(a=x, b=p[x-1]['b']*self.lambda_mu/x, c=0, d=0))
         return p
 
-    def graf(self):
-        print('\n' + self.title.center(80, '-') + '\n')
-        print('{}:\t {}'.format(str(self.arrivals_name), str(self.arrivals)))
-        print('{}:\t {}'.format(str(self.service_name), str(self.service)))
-        print('{}:\t {}'.format(str(self.num_servers_name), str(self.num_servers)))
-        print('\n')
-        print('{}:\t {}'.format(str(self.utilization_name), str(self.utilization)))
-        print('{}:\t {}'.format(str(self.p_empty_name), str(self.p_empty)))
-        print('{}:\t {}'.format(str(self.queue_length_name), str(self.queue_length)))
-        print('{}:\t {}'.format(str(self.number_in_system_name), str(self.number_in_system)))
-        print('{}:\t {}'.format(str(self.time_in_queue_name), str(self.time_in_queue)))
-        print('{}:\t {}'.format(str(self.time_in_system_name), str(self.time_in_system)))
-        print('{}:\t {}'.format(str(self.p_waits_name), str(self.p_waits)))
-        print('\n')
+    def graf(self): 
+        result = [
+            str(self.arrivals_name) + ': ' + str(round(self.arrivals, 3)),
+            str(self.service_name) + ': ' + str(round(self.service, 3)),
+            str(self.num_servers_name) + ': ' + str(round(self.num_servers, 3)),
+            str(self.utilization_name) + ': ' + str(round(self.utilization, 3)),
+            str(self.p_empty_name) + ': ' + str(round(self.p_empty, 3)),
+            str(self.queue_length_name) + ': ' + str(round(self.queue_length, 3)),
+            str(self.number_in_system_name) + ': ' + str(round(self.number_in_system, 3)),
+            str(self.time_in_queue_name) + ': ' + str(round(self.time_in_queue, 3)),
+            str(self.time_in_system_name) + ': ' + str(round(self.time_in_system, 3)),
+            str(self.p_waits_name) + ': ' + str(round(self.p_waits, 3)),
+        ]
+
+        print(str(result))
+        return result

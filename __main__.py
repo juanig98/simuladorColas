@@ -11,13 +11,14 @@ class MainApp(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("gui/app.ui", self)
-        self.btn_simulate.clicked.connect(self.simulate) 
+        self.btn_simulate.clicked.connect(self.simulate)
         intValidator = QIntValidator(1, 9999, self)
         # validator = QValidator()
         self.lineEdit_arrival_rate.setValidator(intValidator)
         # self.lineEdit_arrival_rate.setValidator(validator)
         self.lineEdit_service_rate.setValidator(intValidator)
         self.lineEdit_num_servers.setValidator(intValidator)
+        self.hideQFrame(self.frame_results_mms)
 
     def simulate(self):
         service_rate = int(self.lineEdit_service_rate.text())
@@ -25,7 +26,29 @@ class MainApp(QMainWindow):
         num_servers = int(self.lineEdit_num_servers.text())
 
         mms = MMS(service_rate, arrival_rate, num_servers)
-        mms.graf()
+        results = mms.graf()
+        self.showQFrame(self.frame_results_mms)
+        self.frame_results_mms.setEnabled(True)
+        
+        self.list_results_mms.addItems(results)
+        # for i in results:
+        #     # print(i[0])
+        #     self.list_results_mms.addItem(i[0])
+        
+    
+    def showQFrame(self, qframe):
+        QtWidgets.QFrame.show(qframe)
+        return
+    
+    def hideQFrame(self, qframe):
+        " Handles the hiding of the panel and markers "
+        QtWidgets.QFrame.hide(qframe)
+        self.__text = None
+        self.__paramPositions = None
+        self.__highlightedParam = None
+        # self.__calltipLabel.setText("")
+        return
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
