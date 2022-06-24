@@ -30,7 +30,7 @@
      </sizepolicy>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_mms">
      <attribute name="title">
@@ -606,7 +606,7 @@
        <string>Simular</string>
       </property>
      </widget>
-     <widget class="QProgressBar" name="progress_bar_finite_q_length_2">
+     <widget class="QProgressBar" name="progress_bar_finite_population">
       <property name="geometry">
        <rect>
         <x>740</x>
@@ -992,7 +992,7 @@
   <connection>
    <sender>btn_clear_finite_population</sender>
    <signal>clicked()</signal>
-   <receiver>progress_bar_finite_q_length_2</receiver>
+   <receiver>progress_bar_finite_population</receiver>
    <slot>reset()</slot>
    <hints>
     <hint type="sourcelabel">
