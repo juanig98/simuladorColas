@@ -23,4 +23,7 @@
 1. Tener en env activado `source env/bin/activate`
 2. `pyuic5 gui/app.ui -o gui/app.py`
 
-* 
+
+
+### Video
+[![Video instroducción](https://youtu.be/wqEVAeIpnNg.png)](https://youtu.be/wqEVAeIpnNg)

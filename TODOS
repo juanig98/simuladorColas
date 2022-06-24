@@ -1,6 +1,7 @@
 Tareas:
-    ☐ Resultados con colas infinitas en MMS y MM1
-    ☐ Colas finitas (finite Q length)
-    ☐ Arribos finitos (finite population)
+    ✔ Colas finitas (finite Q length) @done(22-06-24 20:04)
+    ✔ Arribos finitos (finite population) @done(22-06-24 20:04)
     ✔ MG1 @done(22-06-23 19:24)
+    ☐ Resultados con colas infinitas en MMS y MM1
     ☐ Float dision by zero (tasas de arribos = tasa de servicio)
+    ☐ Corregir en Finite population => Tiempo en la cola (Wq), Tiempo en el sistema (Wq), Probabilidad que un cliente tenga que esperar
