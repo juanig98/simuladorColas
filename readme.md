@@ -24,6 +24,11 @@
 2. `pyuic5 gui/app.ui -o gui/app.py`
 
 
-
 ### Video
-[![Video instroducción](https://youtu.be/wqEVAeIpnNg.png)](https://youtu.be/wqEVAeIpnNg)
+
+https://user-images.githubusercontent.com/54777413/175728920-870e6c5b-8dd4-4437-80b0-ecdece4fa11b.mp4
+
+
+
+
+
