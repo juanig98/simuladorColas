@@ -43,43 +43,43 @@ class MMS():
     def __calculate_pw(self):
         """ Cálcula el valor de la probabilidad de espera """
         sum = 0
-        for x in range(self.num_servers):
-            sum += self.p[x]['d']
+        for n in range(self.num_servers):
+            sum += self.p[n]['d']
 
         return 1-sum
 
     def __calculate_p0(self):
         """ Cálcula el valor de P(O) """
         sum = 0
-        for x in range(self.num_servers):
-            sum += self.p[x]['b']
+        for n in range(self.num_servers):
+            sum += self.p[n]['b']
 
         return 1/(sum+self._t)
 
     def __recalculate_p(self):
         """ Cálcula nuevamente el valor de P conociendo los valores de c y d"""
-        for x in range(self.num_servers):
-            if x == 0:
-                self.p[x]['c'] = self.p0
+        for n in range(self.num_servers):
+            if n == 0:
+                self.p[n]['c'] = self.p0
             else:
-                self.p[x]['c'] = (self.p[x-1]['c']*self.lambda_mu)/self.num_servers if x > self.num_servers else (self.p[x-1]['c']*self.lambda_mu)/x
+                self.p[n]['c'] = (self.p[n-1]['c']*self.lambda_mu)/self.num_servers if n > self.num_servers else (self.p[n-1]['c']*self.lambda_mu)/n
 
-            self.p[x]['d'] = self.p[x]['c'] if x < self.num_servers else 0
+            self.p[n]['d'] = self.p[n]['c'] if n < self.num_servers else 0
 
     def __calculate_p(self):
         """ Calcula el valor de P"""
         p = []
-        for x in range(self.num_servers):
-            if x == 0:
-                p.append(dict(a=x, b=1, c=0, d=0))
+        for n in range(self.num_servers):
+            if n == 0:
+                p.append(dict(a=n, b=1, c=0, d=0))
             else:
-                if x > self.s1:
-                    p.append(dict(a=x, b=0, c=0, d=0))
+                if n > self.s1:
+                    p.append(dict(a=n, b=0, c=0, d=0))
                 else:
-                    if x == 1:
-                        p.append(dict(a=x, b=self.lambda_mu, c=0, d=0))
+                    if n == 1:
+                        p.append(dict(a=n, b=self.lambda_mu, c=0, d=0))
                     else:
-                        p.append(dict(a=x, b=p[x-1]['b']*self.lambda_mu/x, c=0, d=0))
+                        p.append(dict(a=n, b=p[n-1]['b']*self.lambda_mu/n, c=0, d=0))
         return p
 
     def simulate(self):
@@ -96,4 +96,3 @@ class MMS():
             str(self.time_in_system_name) + ': ' + str(round(self.time_in_system, 3)),
             str(self.p_waits_name) + ': ' + str(round(self.p_waits, 3)),
         ]
- 
