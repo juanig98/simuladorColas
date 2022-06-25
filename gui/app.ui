@@ -620,10 +620,33 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_config">
+    <widget class="QWidget" name="tab_settings">
      <attribute name="title">
       <string>Ajustes</string>
      </attribute>
+     <widget class="QLabel" name="label_settings_round">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>111</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Redondeo (cifras):</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_settings_round">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QFrame" name="frame_results">
@@ -690,7 +713,7 @@
      <x>0</x>
      <y>0</y>
      <width>869</width>
-     <height>30</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>

@@ -181,14 +181,20 @@ class Ui_MainWindow(object):
         self.btn_simulate_finite_population = QtWidgets.QPushButton(self.tab_population_finite)
         self.btn_simulate_finite_population.setGeometry(QtCore.QRect(400, 30, 100, 40))
         self.btn_simulate_finite_population.setObjectName("btn_simulate_finite_population")
-        self.progress_bar_finite_q_length_2 = QtWidgets.QProgressBar(self.tab_population_finite)
-        self.progress_bar_finite_q_length_2.setGeometry(QtCore.QRect(740, 140, 118, 23))
-        self.progress_bar_finite_q_length_2.setProperty("value", 0)
-        self.progress_bar_finite_q_length_2.setObjectName("progress_bar_finite_q_length_2")
+        self.progress_bar_finite_population = QtWidgets.QProgressBar(self.tab_population_finite)
+        self.progress_bar_finite_population.setGeometry(QtCore.QRect(740, 140, 118, 23))
+        self.progress_bar_finite_population.setProperty("value", 0)
+        self.progress_bar_finite_population.setObjectName("progress_bar_finite_population")
         self.tabWidget.addTab(self.tab_population_finite, "")
-        self.tab_config = QtWidgets.QWidget()
-        self.tab_config.setObjectName("tab_config")
-        self.tabWidget.addTab(self.tab_config, "")
+        self.tab_settings = QtWidgets.QWidget()
+        self.tab_settings.setObjectName("tab_settings")
+        self.label_settings_round = QtWidgets.QLabel(self.tab_settings)
+        self.label_settings_round.setGeometry(QtCore.QRect(20, 30, 111, 18))
+        self.label_settings_round.setObjectName("label_settings_round")
+        self.input_settings_round = QtWidgets.QLineEdit(self.tab_settings)
+        self.input_settings_round.setGeometry(QtCore.QRect(200, 30, 110, 20))
+        self.input_settings_round.setObjectName("input_settings_round")
+        self.tabWidget.addTab(self.tab_settings, "")
         self.frame_results = QtWidgets.QFrame(self.centralwidget)
         self.frame_results.setEnabled(False)
         self.frame_results.setGeometry(QtCore.QRect(-1, 209, 871, 321))
@@ -208,7 +214,7 @@ class Ui_MainWindow(object):
         self.label_results.setObjectName("label_results")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 869, 30))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 869, 23))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -218,7 +224,7 @@ class Ui_MainWindow(object):
         self.actionSalir.setObjectName("actionSalir")
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(4)
+        self.tabWidget.setCurrentIndex(0)
         self.btn_clear_mms.clicked.connect(self.input_service_rate_mms.clear) # type: ignore
         self.btn_clear_mms.clicked.connect(self.input_arrival_rate_mms.clear) # type: ignore
         self.btn_clear_mms.clicked.connect(self.input_num_servers_mms.clear) # type: ignore
@@ -235,7 +241,7 @@ class Ui_MainWindow(object):
         self.btn_clear_finite_population.clicked.connect(self.input_service_rate_finite_population.clear) # type: ignore
         self.btn_clear_finite_population.clicked.connect(self.input_num_servers_finite_population.clear) # type: ignore
         self.btn_clear_finite_population.clicked.connect(self.input_population_size_finite_population.clear) # type: ignore
-        self.btn_clear_finite_population.clicked.connect(self.progress_bar_finite_q_length_2.reset) # type: ignore
+        self.btn_clear_finite_population.clicked.connect(self.progress_bar_finite_population.reset) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.tabWidget, self.input_arrival_rate_mms)
         MainWindow.setTabOrder(self.input_arrival_rate_mms, self.input_service_rate_mms)
@@ -299,6 +305,7 @@ class Ui_MainWindow(object):
         self.label_arrival_rate_finite_population.setText(_translate("MainWindow", "Tasa de arribos:"))
         self.btn_simulate_finite_population.setText(_translate("MainWindow", "Simular"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_population_finite), _translate("MainWindow", "Población finita"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_config), _translate("MainWindow", "Ajustes"))
+        self.label_settings_round.setText(_translate("MainWindow", "Redondeo (cifras):"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_settings), _translate("MainWindow", "Ajustes"))
         self.label_results.setText(_translate("MainWindow", "Esperando simulación..."))
         self.actionSalir.setText(_translate("MainWindow", "Salir"))
