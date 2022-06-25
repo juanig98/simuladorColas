@@ -4,7 +4,7 @@ import math
 
 class MMS():
 
-    def __init__(self, service_rate, arrival_rate, num_servers):
+    def __init__(self, arrival_rate, service_rate, num_servers):
         # Párametros recibidos
         self.title = ' Sistema de colas M/M/S '
         self.service_name = "Tasa de servicio"

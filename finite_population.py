@@ -46,7 +46,7 @@ class FinitePopulation:
         self.number_in_system_name = "Cantidad de clientes en el sistema"
         self.number_in_system = self.queue_length + self._g_sum + self.num_servers * (1 - self._h_sum)
 
-        self._effective_lambda = self.population_size * self.number_in_system
+        self._effective_lambda = self.population_size - self.number_in_system
         self.effective_lambda = self._effective_lambda * self.arrival_rate
 
         self.time_in_queue_name = 'Tiempo en la cola (Wq)'
@@ -54,7 +54,7 @@ class FinitePopulation:
         self.time_in_system_name = 'Tiempo en el sistema (Wq)'
         self.time_in_system = self.number_in_system/self.effective_lambda
         self.p_customer_waits_name = 'Probabilidad que un cliente tenga que esperar'
-        self.p_customer_waits = self._h_sum
+        self.p_customer_waits = 1 - self._h_sum
 
     def __calculate_j(self,):
         """"""
@@ -141,6 +141,10 @@ class FinitePopulation:
     def simulate(self,):
         """"""
         return [
+            self.arrival_rate_name + ': ' + str(round(self.arrival_rate, 4)),
+            self.service_rate_name + ': ' + str(round(self.service_rate, 4)),
+            self.num_servers_name + ': ' + str(round(self.num_servers, 4)),
+            self.population_size_name + ': ' + str(round(self.population_size, 4)),
             self.utilization_name + ': ' + str(round(self.utilization*100, 4)) + ' %',
             self.p_empty_name + ': ' + str(round(self.p_empty, 4)),
             self.queue_length_name + ': ' + str(round(self.queue_length, 4)),
@@ -149,5 +153,4 @@ class FinitePopulation:
             self.time_in_system_name + ': ' + str(round(self.time_in_system, 4)),
             self.p_customer_waits_name + ': ' + str(round(self.p_customer_waits, 4)),
         ]
-
- 
+        

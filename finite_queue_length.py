@@ -151,3 +151,12 @@ class FiniteQueueLength:
             str(self.p_customer_waits_name) + ': ' + str(round(self.p_customer_waits, 4)),
             str(self.p_customer_balks_name) + ': ' + str(round(self.p_customer_balks, 4)),
         ]
+
+    def _test(self,):
+        """"""
+        print("TEST".center(100, '-'))
+        print("\nResultados: \n") 
+        for i in self.simulate():
+            print(i)
+        print("\n")
+        print("TEST".center(100, '-'))

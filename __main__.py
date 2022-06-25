@@ -54,8 +54,7 @@ class MainApp(QMainWindow):
             self.label_results.setText("Todo ok")
         except Exception as e:
             self.label_results.setText("Ocurrió un error.\n {}".format(str(e)))
-            
-            
+
     def simulate_mg1(self):
         self.run(self.progress_bar_mg1)
         self.frame_results.setEnabled(True)
@@ -95,7 +94,7 @@ class MainApp(QMainWindow):
             service_rate = int(self.input_service_rate_mms.text())
             arrival_rate = int(self.input_arrival_rate_mms.text())
             num_servers = int(self.input_num_servers_mms.text())
-            mms = MMS(service_rate, arrival_rate, num_servers)
+            mms = MMS(arrival_rate, service_rate, num_servers)
             results = mms.simulate()
             self.list_results.addItem(mms.title.center(84, '-') + '\n',)
             self.list_results.addItems(results)
