@@ -1,6 +1,8 @@
 
 import math
 
+import numpy as np
+
 
 class MMS():
 
@@ -20,9 +22,15 @@ class MMS():
         self.s1 = self.num_servers-1
         self.fact_s1 = math.factorial(self.s1)
         self._t = (self.lambda_mu**self.num_servers)/(self.fact_s1*self.num_servers*(1-self._s))
+        self.min_value = 0.00000000001
+        self._a = []
+        self._b = []
+        self._c = []
+        self._d = []
         self.p = self.__calculate_p()
         self.p0 = self.__calculate_p0()
-        self.__recalculate_p()
+        self._c = self.__calculate_c()
+        self._d = self.__calculate_d()
 
         # Variables
         self.utilization_name = "Utilización"
@@ -38,49 +46,51 @@ class MMS():
         self.time_in_system_name = "Tiempo en el sistema (Wq)"
         self.time_in_system = self.time_in_queue+1/self.service
         self.p_waits_name = "Probabilidad que un cliente tenga que esperar"
-        self.p_waits = self.__calculate_pw()
+        self.p_waits = 1 - sum(self._d)
 
-    def __calculate_pw(self):
+    def __calculate_d(self):
         """ Cálcula el valor de la probabilidad de espera """
-        sum = 0
+        d = []
         for n in range(self.num_servers):
-            sum += self.p[n]['d']
-
-        return 1-sum
+            d.append(self._c[n])
+        return d
 
     def __calculate_p0(self):
         """ Cálcula el valor de P(O) """
         sum = 0
         for n in range(self.num_servers):
-            sum += self.p[n]['b']
+            sum += self._b[n]
 
         return 1/(sum+self._t)
 
-    def __recalculate_p(self):
+    def __calculate_c(self):
         """ Cálcula nuevamente el valor de P conociendo los valores de c y d"""
-        for n in range(self.num_servers):
-            if n == 0:
-                self.p[n]['c'] = self.p0
-            else:
-                self.p[n]['c'] = (self.p[n-1]['c']*self.lambda_mu)/self.num_servers if n > self.num_servers else (self.p[n-1]['c']*self.lambda_mu)/n
-
-            self.p[n]['d'] = self.p[n]['c'] if n < self.num_servers else 0
+        c = [self.p0]
+        _aux = 1
+        n = 1
+        while _aux > self.min_value:
+            _aux = (c[n-1]*self.lambda_mu)/self.num_servers if n > self.num_servers else (c[n-1]*self.lambda_mu)/n
+            c.append(_aux)
+            n += 1
+        return c
 
     def __calculate_p(self):
         """ Calcula el valor de P"""
-        p = []
         for n in range(self.num_servers):
             if n == 0:
-                p.append(dict(a=n, b=1, c=0, d=0))
+                self._a.append(n)
+                self._b.append(1)
             else:
                 if n > self.s1:
-                    p.append(dict(a=n, b=0, c=0, d=0))
+                    self._a.append(n)
+                    self._b.append(0)
                 else:
                     if n == 1:
-                        p.append(dict(a=n, b=self.lambda_mu, c=0, d=0))
+                        self._a.append(n)
+                        self._b.append(self.lambda_mu)
                     else:
-                        p.append(dict(a=n, b=p[n-1]['b']*self.lambda_mu/n, c=0, d=0))
-        return p
+                        self._a.append(n)
+                        self._b.append(self._b[n-1]*self.lambda_mu/n)
 
     def simulate(self):
         """ Simula la cola con los parámetros recibidos """
