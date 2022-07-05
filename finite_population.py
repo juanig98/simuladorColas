@@ -1,5 +1,8 @@
 import math
 
+from matplotlib import pyplot as plt
+import numpy as np
+
 
 class FinitePopulation:
 
@@ -80,7 +83,7 @@ class FinitePopulation:
         g = [0]
         n = 1
         a = 1
-        while a != 0:
+        while a != 0: 
             a = (n + 1) - self.num_servers
             g.append(n*self.pn[n])
             n += 1
@@ -153,4 +156,13 @@ class FinitePopulation:
             self.time_in_system_name + ': ' + str(round(self.time_in_system, 4)),
             self.p_customer_waits_name + ': ' + str(round(self.p_customer_waits, 4)),
         ]
-        
+    
+    def view_graphics(self,):
+        co = np.arange(len(self.pn))
+        an = 1
+        fig, ax = plt.subplots()
+        ax.set_title(self.title)
+        ax.set_xlabel('Numero en el sistema')
+        ax.set_ylabel('Probabilidad')
+        ax.bar(co, self.pn, an)
+        plt.show()

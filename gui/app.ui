@@ -147,7 +147,7 @@
      <widget class="QPushButton" name="btn_view_images_mms">
       <property name="geometry">
        <rect>
-        <x>720</x>
+        <x>740</x>
         <y>30</y>
         <width>110</width>
         <height>35</height>
@@ -155,209 +155,6 @@
       </property>
       <property name="text">
        <string>Ver imágenes</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_mm1">
-     <attribute name="title">
-      <string>M/M/1</string>
-     </attribute>
-     <widget class="QPushButton" name="btn_simulate_mm1">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>30</y>
-        <width>100</width>
-        <height>40</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Simular</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_service_rate_mm1">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>60</y>
-        <width>140</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Tasa de servicio:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="input_service_rate_mm1">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>60</y>
-        <width>110</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_clear_mm1">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>80</y>
-        <width>100</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Limpiar</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="input_arrival_rate_mm1">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>30</y>
-        <width>110</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_arrival_rate_mm1">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>30</y>
-        <width>140</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Tasa de arribos:</string>
-      </property>
-     </widget>
-     <widget class="QProgressBar" name="progress_bar_mm1">
-      <property name="geometry">
-       <rect>
-        <x>740</x>
-        <y>140</y>
-        <width>118</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="value">
-       <number>0</number>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_mg1">
-     <attribute name="title">
-      <string>M/G/1</string>
-     </attribute>
-     <widget class="QPushButton" name="btn_simulate_mg1">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>30</y>
-        <width>100</width>
-        <height>40</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Simular</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_average_service_time_mg1">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>60</y>
-        <width>180</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Tiempo promedio de servicio:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="input_standard_dev_mg1">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>90</y>
-        <width>110</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_standard_dev_mg1_2">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>90</y>
-        <width>240</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Desvío estándar del tiempo de servicio:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="input_average_service_time_mg1">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>60</y>
-        <width>110</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_clear_mg1">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>80</y>
-        <width>100</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Limpiar</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="input_arrival_rate_mg1">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>30</y>
-        <width>110</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_standard_dev_mg1">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>30</y>
-        <width>140</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Tasa de arribos:</string>
-      </property>
-     </widget>
-     <widget class="QProgressBar" name="progress_bar_mg1">
-      <property name="geometry">
-       <rect>
-        <x>740</x>
-        <y>140</y>
-        <width>118</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="value">
-       <number>0</number>
       </property>
      </widget>
     </widget>
@@ -496,6 +293,19 @@
        </rect>
       </property>
      </widget>
+     <widget class="QPushButton" name="btn_view_images_finite_q_length">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>30</y>
+        <width>110</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver imágenes</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_population_finite">
      <attribute name="title">
@@ -620,6 +430,222 @@
       </property>
      </widget>
      <widget class="QProgressBar" name="progress_bar_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>140</y>
+        <width>118</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_view_images_finite_population">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>30</y>
+        <width>110</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver imágenes</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_mg1">
+     <attribute name="title">
+      <string>M/G/1</string>
+     </attribute>
+     <widget class="QPushButton" name="btn_simulate_mg1">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>30</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simular</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_average_service_time_mg1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>180</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tiempo promedio de servicio:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_standard_dev_mg1">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>90</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_standard_dev_mg1_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>240</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Desvío estándar del tiempo de servicio:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_average_service_time_mg1">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>60</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clear_mg1">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>80</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_arrival_rate_mg1">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>30</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_standard_dev_mg1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de arribos:</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progress_bar_mg1">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>140</y>
+        <width>118</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_mm1">
+     <attribute name="title">
+      <string>M/M/1</string>
+     </attribute>
+     <widget class="QPushButton" name="btn_simulate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>30</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simular</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_service_rate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de servicio:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_service_rate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>60</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clear_mm1">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>80</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_arrival_rate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>110</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_arrival_rate_mm1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tasa de arribos:</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progress_bar_mm1">
       <property name="geometry">
        <rect>
         <x>740</x>

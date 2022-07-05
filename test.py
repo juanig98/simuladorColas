@@ -22,7 +22,7 @@ EXAMPLES_MG1 = [
 ]
 EXAMPLES_FINITE_POPULATION = [
     FinitePopulation(0.125, 2, 10, 100),
-    FinitePopulation(4, 30, 4, 25),
+    FinitePopulation(4, 30, 6, 25),
 ]
 EXAMPLES_FINITE_QUEUE = [
     FiniteQueueLength(6, 5, 1, 2),
@@ -67,16 +67,3 @@ class Test:
 
 if len(sys.argv) == 2:
     Test(sys.argv[1])
-
-
-# mms = EXAMPLES_MMS[1]
-mms = MMS(20,10,3)
-co = np.arange(len(mms._c))
-an = 1
-
-fig, ax = plt.subplots()
-ax.set_title('MMS')
-ax.set_xlabel('Numero en el sistema')
-ax.set_ylabel('Probabilidad')
-ax.bar(co, mms._c, an)
-plt.show()

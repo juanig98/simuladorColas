@@ -109,13 +109,11 @@ class MMS():
         ]
 
     def view_graphics(self,):
-        mms = MMS(self.arrivals, self.service, self.num_servers)
-        co = np.arange(len(mms._c))
+        co = np.arange(len(self._c))
         an = 1
-
         fig, ax = plt.subplots()
-        ax.set_title('MMS')
+        ax.set_title(self.title)
         ax.set_xlabel('Numero en el sistema')
         ax.set_ylabel('Probabilidad')
-        ax.bar(co, mms._c, an)
+        ax.bar(co, self._c, an)
         plt.show()

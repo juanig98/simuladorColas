@@ -1,4 +1,7 @@
 import math
+from matplotlib import pyplot as plt
+
+import numpy as np
 
 
 class FiniteQueueLength:
@@ -152,11 +155,12 @@ class FiniteQueueLength:
             str(self.p_customer_balks_name) + ': ' + str(round(self.p_customer_balks, 4)),
         ]
 
-    def _test(self,):
-        """"""
-        print("TEST".center(100, '-'))
-        print("\nResultados: \n") 
-        for i in self.simulate():
-            print(i)
-        print("\n")
-        print("TEST".center(100, '-'))
+    def view_graphics(self,): 
+        co = np.arange(len(self.pn))
+        an = 1
+        fig, ax = plt.subplots()
+        ax.set_title(self.title)
+        ax.set_xlabel('Numero en el sistema')
+        ax.set_ylabel('Probabilidad')
+        ax.bar(co, self.pn, an)
+        plt.show()
