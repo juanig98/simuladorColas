@@ -94,7 +94,7 @@ class MMS():
                         self._b.append(self._b[n-1]*self.lambda_mu/n)
 
     def simulate(self):
-        """ Simula la cola con los parámetros recibidos """
+        """ Simula la cola mms con los parámetros recibidos """
         return [
             str(self.arrivals_name) + ': ' + str(round(self.arrivals, 3)),
             str(self.service_name) + ': ' + str(round(self.service, 3)),
@@ -109,6 +109,7 @@ class MMS():
         ]
 
     def view_graphics(self,):
+        """ Muestra los gráficos de probabilidad """
         co = np.arange(len(self._c))
         an = 1
         fig, ax = plt.subplots()

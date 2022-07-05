@@ -109,7 +109,7 @@ class FiniteQueueLength:
         _aux = 1
         i = 0
         while _aux > self.__min_value and i < self.__max_value:
-            i += 1 
+            i += 1
             _aux = (self.p0 * self.lambda_mu**i) / (self.s_fact*self.num_servers**(i-self.num_servers))
             g.append(_aux)
 
@@ -143,7 +143,7 @@ class FiniteQueueLength:
         return i
 
     def simulate(self,):
-        """"""
+        """ Muestra los resultados de simular la cola de fila finita con los parámetros recibidos """
         return [
             str(self.utilization_name) + ': ' + str(round(self.utilization*100, 4)) + ' %',
             str(self.p_empty_name) + ': ' + str(round(self.p_empty, 4)),
@@ -155,7 +155,8 @@ class FiniteQueueLength:
             str(self.p_customer_balks_name) + ': ' + str(round(self.p_customer_balks, 4)),
         ]
 
-    def view_graphics(self,): 
+    def view_graphics(self,):
+        """ Muestra los gráficos de probabilidad """
         co = np.arange(len(self.pn))
         an = 1
         fig, ax = plt.subplots()

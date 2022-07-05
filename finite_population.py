@@ -142,7 +142,7 @@ class FinitePopulation:
         return d
 
     def simulate(self,):
-        """"""
+        """ Muestra los resultados de simular la cola con población finita con los parámetros recibidos """
         return [
             self.arrival_rate_name + ': ' + str(round(self.arrival_rate, 4)),
             self.service_rate_name + ': ' + str(round(self.service_rate, 4)),
