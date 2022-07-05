@@ -4,4 +4,5 @@ Tareas:
     ✔ MG1 @done(22-06-23 19:24)
     ☐ Resultados con colas infinitas en MMS y MM1
     ☐ Float dision by zero (tasas de arribos = tasa de servicio)
-    ☐ Corregir en Finite population => Tiempo en la cola (Wq), Tiempo en el sistema (Wq), Probabilidad que un cliente tenga que esperar
+    ✔ Corregir en Finite population => Tiempo en la cola (Wq), Tiempo en el sistema (Wq), Probabilidad que un cliente tenga que esperar @done(22-07-05 17:06)
+    ☐ Vistas de graficos en mg1, finite_population y finite_q_length
