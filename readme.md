@@ -17,7 +17,7 @@ El presente trabajo entrega una versión dinámica desarrollada para solventar e
 
 # Usabilidad
 
-Al igual que en la planilla de cálculo nombrada con anterioridad, la usabilidad es similar, se provee de una interfaz gráfica que permite la selección del modelo de cola requerido, una vez elegido se procede a la carga de datos propios del modelo. Posteriormente, se simula el modelo. Además es posible visualizar las probabilidades de manera gráfica (gráfico de barras). Ver video
+Al igual que en la planilla de cálculo nombrada con anterioridad, la usabilidad es similar, se provee de una interfaz gráfica que permite la selección del modelo de cola requerido, una vez elegido se procede a la carga de datos propios del modelo. Posteriormente, se simula el modelo. Además es posible visualizar las probabilidades de manera gráfica (gráfico de barras). Ver [video](#Video)
 
 # Video
 
