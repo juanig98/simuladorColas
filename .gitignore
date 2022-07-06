@@ -1,4 +1,10 @@
 __pycache__
+build
+dist
+__main__.build
+__main__.dist
 env
+*.bin
+*.spec
 docs/*
 !docs/media

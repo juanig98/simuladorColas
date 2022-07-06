@@ -2,3 +2,4 @@ PyQt5
 autopep8
 numpy 
 matplotlib
+pyinstaller
