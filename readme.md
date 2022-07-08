@@ -23,7 +23,6 @@ Al igual que en la planilla de cálculo nombrada con anterioridad, la usabilidad
 
 https://user-images.githubusercontent.com/54777413/175728920-870e6c5b-8dd4-4437-80b0-ecdece4fa11b.mp4
 
-
 # Desarrollo
 
 ## Versiones:
@@ -45,7 +44,28 @@ https://user-images.githubusercontent.com/54777413/175728920-870e6c5b-8dd4-4437-
 5. Correr el entorno grafico:
    - `python __main__.py` 
 
-* Se pueden obviar los pasos 4 y 5 ejecutando el bash `./run.sh`
+* (Linux) Se pueden obviar los pasos 4 y 5 ejecutando el bash `./run.sh`
+
+# Generación de ejecutables
+
+## Windows
+
+1. Activar el entorno:
+   - `./env/bin/activate.bat` (Windows)
+2. Generar .exe para Windows
+   - `pyinstaller --onefile __`
+3. Copiar los archivos del entorno gráfico del directorio *gui* dentro del directorio *dist*
+4. Para utilizar como ejecutable se debe utilizar el directorio *dist* con todos los archivos que contiene
+
+# Linux
+
+1. Activar el entorno:
+   - `source env/bin/activate` (Linux)
+2. Generar .exe para Windows
+   - `pyinstaller --onefile __`
+3. Copiar los archivos del entorno gráfico 
+   - `cp -r ./gui ./dist`
+4. Para utilizar como ejecutable se debe utilizar lel directorio *dist* con todos los archivos que contiene
 
 # Autor
 
