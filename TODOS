@@ -6,3 +6,6 @@ Tareas:
     ☐ Float dision by zero (tasas de arribos = tasa de servicio)
     ✔ Corregir en Finite population => Tiempo en la cola (Wq), Tiempo en el sistema (Wq), Probabilidad que un cliente tenga que esperar @done(22-07-05 17:06)
     ✔ Vistas de graficos en mg1, finite_population y finite_q_length @done(22-07-08 17:32)
+    ☐ Corrección SIMULAR
+        En realidad realiza calculos que dan resultados iguales NO es una simulación
+    ☐ Pensar en programar un entorno de SIMULACIÓN adecuado

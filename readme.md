@@ -21,7 +21,7 @@ Al igual que en la planilla de cálculo nombrada con anterioridad, la usabilidad
 
 # Video
 
-https://user-images.githubusercontent.com/54777413/175728920-870e6c5b-8dd4-4437-80b0-ecdece4fa11b.mp4
+- https://user-images.githubusercontent.com/54777413/175728920-870e6c5b-8dd4-4437-80b0-ecdece4fa11b.mp4
 
 # Desarrollo
 
@@ -53,7 +53,7 @@ https://user-images.githubusercontent.com/54777413/175728920-870e6c5b-8dd4-4437-
 1. Activar el entorno:
    - `./env/bin/activate.bat` (Windows)
 2. Generar .exe para Windows
-   - `pyinstaller --onefile __`
+   - `pyinstaller --onefile __main__.py`
 3. Copiar los archivos del entorno gráfico del directorio *gui* dentro del directorio *dist*
 4. Para utilizar como ejecutable se debe utilizar el directorio *dist* con todos los archivos que contiene
 
@@ -61,8 +61,8 @@ https://user-images.githubusercontent.com/54777413/175728920-870e6c5b-8dd4-4437-
 
 1. Activar el entorno:
    - `source env/bin/activate` (Linux)
-2. Generar .exe para Windows
-   - `pyinstaller --onefile __`
+2. Generar el ejecutable
+   - `pyinstaller --onefile __main__.py`
 3. Copiar los archivos del entorno gráfico 
    - `cp -r ./gui ./dist`
 4. Para utilizar como ejecutable se debe utilizar lel directorio *dist* con todos los archivos que contiene
